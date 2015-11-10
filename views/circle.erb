@@ -1,0 +1,76 @@
+<a href="/">Home page</a>
+
+
+<script charset="utf-8">
+  var holder = d3.select("body") // select the body element
+    .append("svg") // add an SVG element to the body
+    .attr("width", 449) //make the SVG element 449 pixels wide
+    .attr("height", 249); // make the SVG element 249 pixels high
+
+  // Shapes with their required attributes
+
+  // CIRCLE
+  holder.append("circle") // attach a circle
+    .attr("cx", 200) // position the x-center
+    .attr("cy", 100) // position the y-center
+    .attr("r", 50); // set the radius
+
+
+  // ELLIPSE
+  holder.append("ellipse") // attach the ellipse
+    .attr("cx", 200) // position the x-center
+    .attr("cy", 100) // position the y-center
+    .attr("rx", 100) // set the x radius
+    .attr("ry", 50) // set the y radius
+
+  // RECTANGLE
+  holder.append("rect") // attach the rectangle
+    .attr("x", 100) // position the left of the rectangle
+    .attr("y", 50) // position the top of the rectangle
+    .attr("height", 100) // set the height
+    .attr("width", 200) // set the width
+
+  // RECTANGLE - rounded
+  holder.append("rect") // attach the rectangle
+    .attr("x", 100) // position the left of the rectangle
+    .attr("y", 50) // position the top of the rectangle
+    .attr("height", 100) // set the height
+    .attr("width", 200) // set the width
+    .attr("rx", 10) // set the x corner curve radius
+    .attr("ry", 10); // set the y corner curve radius
+
+  // LINE
+  holder.append("line") // attach the line
+    .style("stroke", "black") // color the line
+    .attr("x1", 100) // x position of the first end of the line
+    .attr("y1", 50) // y position of the first end of the line
+    .attr("x2", 300) // x position of the second end of the line
+    .attr("y2", 150) // y position of the second end of the line
+
+  // POLYLINE - multiple lines
+  // Probably should use a path in SVG instead
+  holder.append("polyline") // attach a polyline
+    .style("stroke", "black") // color the line
+    .style("fill", "none") // remove any fill color
+    .attr("points", "100,50,200,150,300,50") // x,y points
+
+  // POLYGON
+  holder.append("polygon") // attach a polygon
+    .style("stroke", "black") // color the line
+    .style("fill", "none") // remove any fill color
+    .attr("points", "100,50,200,150,300,50"); // x,y points
+
+  // PATH
+  holder.append("path") // attach a path
+    .style("stroke", "black")
+    .style("fill", "none")
+    .attr("d", "M 100,50, L 200,150, L 300,50 Z"); // path commands
+
+  // TEXT
+  holder.append("text") // append text
+    .style("fill", "black") // fill the text black
+    .attr("x", 200) // set the x position of left side of text
+    .attr("y", 100) // set the y position of bottom of text
+    .attr("text-anchor", "middle") // set the position of the text
+    .text("Hello World"); // define the text to display
+</script>

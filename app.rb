@@ -1,6 +1,9 @@
 require 'sinatra'
 
-get '/' do 
+get '/' do
   erb :index
 end
 
+get '/circle' do
+  erb :circle
+end
