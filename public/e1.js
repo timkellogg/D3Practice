@@ -3,6 +3,7 @@ var margin = {top: 30, right: 20, bottom: 30, left: 50},
     width = 400 - margin.left - margin.right,
     height = 270 - margin.top - margin.bottom;
 
+
 // Parse the date / time
 var parseDate = d3.time.format("%d-%b-%y").parse;
 
@@ -124,9 +125,13 @@ d3.csv("data.csv", function(error, data) {
     )
 });
 
+// automatic updating
+var inter = setInterval(function() {
+  updateData();
+}, 5000);
+
 
 function updateData() {
-
   // Import the data
   d3.csv("data-alt.csv", function(error, data) {
     data.forEach(function(d) {
