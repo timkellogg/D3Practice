@@ -27,3 +27,7 @@ end
 get '/table_with_sorting' do
   erb :table_with_sorting
 end
+
+get '/svg_link' do
+  erb :svg_link
+end
