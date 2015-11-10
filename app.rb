@@ -12,6 +12,10 @@ get '/inputs' do
   erb :inputs
 end
 
-get '/inputs-multiple' do
+get '/inputs_multiple' do
   erb :inputs_multiple
+end
+
+get '/multiple_text' do
+  erb :multiple_text
 end
