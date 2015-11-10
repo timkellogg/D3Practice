@@ -19,3 +19,7 @@ end
 get '/multiple_text' do
   erb :multiple_text
 end
+
+get '/table_graph' do
+  erb :table_graph
+end
