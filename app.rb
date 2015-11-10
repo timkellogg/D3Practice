@@ -23,3 +23,7 @@ end
 get '/table_graph' do
   erb :table_graph
 end
+
+get '/table_with_sorting' do
+  erb :table_with_sorting
+end
