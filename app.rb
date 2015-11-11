@@ -31,3 +31,7 @@ end
 get '/svg_link' do
   erb :svg_link
 end
+
+get '/simple_bar_chart' do
+  erb :simple_bar_chart
+end

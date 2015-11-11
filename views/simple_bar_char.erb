@@ -1,0 +1,31 @@
+<h2>Simple bar chart</h2>
+
+<style>
+  .axis {
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+</style>
+<script charset="utf-8">
+  var margin = { top: 20, right: 20, bottom: 70, left: 40 },
+    width = 600 - margin.left - margin.right;
+    height = 300 - margin.top - margin.bottom;
+
+  // parse the date / time
+  var parseDate = d3.time.format("%Y-%m").parse;
+
+  var x = d3.scale.orginal().rangeRoundBands([0, width], .05);
+
+  var y = d3.scale.linear().range([height, 0]);
+
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickFormat(d3.time.format("%Y-%m"));
+</script>
